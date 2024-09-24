@@ -43,7 +43,18 @@ class ScreenFavrite extends StatelessWidget {
                             children: [
                               Text(value.favList[index].title),
                             ],
-                          )
+                          ),
+                          IconButton(
+                              onPressed: () {
+                                _favouritecartServices
+                                    .ischeck(value.favList[index]);
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                  content: Text("Removed"),
+                                  backgroundColor: Colors.red,
+                                ));
+                              },
+                              icon: Icon(Icons.delete))
                         ],
                       ),
                   separatorBuilder: (context, index) => Divider(),

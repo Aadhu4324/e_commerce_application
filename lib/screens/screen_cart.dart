@@ -62,7 +62,12 @@ class _ScreenCartState extends State<ScreenCart> {
                               Text(
                                   'Price : ${value.cartItems[index].price * value.cartItems[index].quantity}')
                             ],
-                          )
+                          ),
+                          IconButton(
+                              onPressed: () {
+                                value.removeItem(value.cartItems[index]);
+                              },
+                              icon: Icon(Icons.delete))
                         ],
                       ),
                   separatorBuilder: (context, index) => Divider(),

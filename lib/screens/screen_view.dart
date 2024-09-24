@@ -12,8 +12,6 @@ class ScreenView extends StatefulWidget {
   State<ScreenView> createState() => _ScreenViewState();
 }
 
-Color color = Colors.orange;
-
 class _ScreenViewState extends State<ScreenView> {
   @override
   Widget build(BuildContext context) {
@@ -27,7 +25,7 @@ class _ScreenViewState extends State<ScreenView> {
               onPressed: () {
                 _favouriteServices.ischeck(widget.product);
               },
-              icon: _favouriteServices.isExist
+              icon: widget.product.isFav
                   ? Icon(
                       Icons.favorite,
                       color: Colors.red,
@@ -85,20 +83,18 @@ class _ScreenViewState extends State<ScreenView> {
       ),
       floatingActionButton: InkWell(
         onTap: () {
-          setState(() {
-            color == Colors.orange
-                ? color = Colors.green
-                : color = Colors.orange;
-          });
           _cartServices.addCart(widget.product);
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text("Added"),
+            backgroundColor: Colors.green,
+          ));
         },
-        child: AnimatedContainer(
-          duration: Duration(milliseconds: 500),
+        child: Container(
           margin: EdgeInsets.only(bottom: 20),
-          width: 200,
+          width: 150,
           height: 80,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25), color: color),
+              borderRadius: BorderRadius.circular(25), color: Colors.orange),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

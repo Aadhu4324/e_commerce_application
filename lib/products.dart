@@ -6,6 +6,7 @@ class Products {
   int quantity;
   String categories;
   int id;
+  bool isFav;
   Products(
       {required this.title,
       required this.description,
@@ -13,7 +14,8 @@ class Products {
       required this.quantity,
       required this.categories,
       required this.image,
-      required this.id});
+      required this.id,
+      required this.isFav});
 }
 
 List<Products> products = [
@@ -25,7 +27,8 @@ List<Products> products = [
       quantity: 1,
       categories: "Shoes",
       image: "images/categorie1.jpg",
-      id: 1),
+      id: 1,
+      isFav: false),
   Products(
       title: "Leives ",
       description:
@@ -34,7 +37,8 @@ List<Products> products = [
       quantity: 1,
       categories: "Shirts",
       image: "images/categorie2.jpg",
-      id: 2),
+      id: 2,
+      isFav: false),
   Products(
       title: "Mamearth",
       description:
@@ -43,7 +47,8 @@ List<Products> products = [
       quantity: 1,
       categories: "Beauty",
       image: "images/categorie3.jpg",
-      id: 3),
+      id: 3,
+      isFav: false),
   Products(
       title: "jwellery",
       description:
@@ -52,7 +57,8 @@ List<Products> products = [
       quantity: 1,
       categories: "Jwellery",
       image: "images/categorie4.jpg",
-      id: 4),
+      id: 4,
+      isFav: false),
   Products(
       title: "Lpatop",
       description:
@@ -61,5 +67,6 @@ List<Products> products = [
       quantity: 1,
       categories: "Tech",
       image: "images/categorie5.jpg",
-      id: 5)
+      id: 5,
+      isFav: false)
 ];

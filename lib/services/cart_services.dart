@@ -40,4 +40,10 @@ class CartServices with ChangeNotifier {
     _tottalPrice = cartprices.fold(0.00, (_, price) => _ + price);
     notifyListeners();
   }
+
+  removeItem(Products product) {
+    product.quantity = 1;
+    _cartItems.remove(product);
+    notifyListeners();
+  }
 }
