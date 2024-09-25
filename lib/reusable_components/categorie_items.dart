@@ -13,14 +13,11 @@ class CategorieItems extends StatelessWidget {
           itemBuilder: (context, index) => Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Container(
-                    width: 100,
-                    height: 80,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(categories[index].imagePath),
-                            fit: BoxFit.fill),
-                        shape: BoxShape.circle),
+                  CircleAvatar(
+                    radius: 35,
+                    backgroundImage: AssetImage(
+                      categories[index].imagePath,
+                    ),
                   ),
                   SizedBox(
                     height: 10,

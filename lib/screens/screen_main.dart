@@ -1,3 +1,4 @@
+import 'package:e_commerce_application/screens/screen_all_proucts.dart';
 import 'package:e_commerce_application/screens/screen_cart.dart';
 import 'package:e_commerce_application/screens/screen_favrite.dart';
 import 'package:e_commerce_application/screens/screen_home.dart';
@@ -12,7 +13,7 @@ class ScreenMain extends StatefulWidget {
 }
 
 List screen = [
-  Scaffold(),
+  ScreenAllProucts(),
   ScreenFavrite(),
   ScreenHome(),
   ScreenCart(),
