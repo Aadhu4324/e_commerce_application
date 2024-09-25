@@ -1,9 +1,7 @@
 import 'package:e_commerce_application/products.dart';
 import 'package:e_commerce_application/reusable_components/product_card.dart';
-import 'package:e_commerce_application/screens/screen_view.dart';
-import 'package:e_commerce_application/services/cart_favourite_services.dart';
+
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class ScreenAllProucts extends StatelessWidget {
   const ScreenAllProucts({super.key});
@@ -11,7 +9,11 @@ class ScreenAllProucts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: Text("All Products"),
+          centerTitle: true,
+          backgroundColor: Colors.amber,
+        ),
         body: Padding(
           padding: EdgeInsets.all(20),
           child: Expanded(

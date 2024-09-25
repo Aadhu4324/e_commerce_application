@@ -1,7 +1,15 @@
+import 'package:e_commerce_application/screens/screean_all_products_categories.dart';
 import 'package:flutter/material.dart';
 
-class MYSearchBar extends StatelessWidget {
-  const MYSearchBar({super.key});
+class MYSearchBar extends StatefulWidget {
+  MYSearchBar({super.key});
+
+  @override
+  State<MYSearchBar> createState() => _MYSearchBarState();
+}
+
+class _MYSearchBarState extends State<MYSearchBar> {
+  TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -11,14 +19,35 @@ class MYSearchBar extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
+              //   child: TextFormField(
+              //     controller: _controller,
+              //     decoration: InputDecoration(),
+              //   ),
+              // ),
               child: SearchBar(
+            controller: _controller,
             hintText: "Search",
           )),
-          const SizedBox(
+          SizedBox(
             width: 5,
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              if (_controller.text.isEmpty) {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text("Please Fill This Field Before Search")));
+              } else {
+                String data = _controller.text;
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          ScreeanAllProductsCategories(data: data),
+                    ));
+
+                _controller.clear();
+              }
+            },
             icon: Icon(
               Icons.search_outlined,
               size: 30,

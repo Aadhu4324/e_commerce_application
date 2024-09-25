@@ -9,5 +9,5 @@ List<Categories> categories = [
   Categories(imagePath: "images/categorie2.jpg", title: "Shirts"),
   Categories(imagePath: "images/categorie3.jpg", title: "Beauty"),
   Categories(imagePath: "images/categorie4.jpg", title: "Jwellery"),
-  Categories(imagePath: "images/categorie5.jpg", title: "Tech")
+  Categories(imagePath: "images/laptopsix.webp", title: "Laptop")
 ];

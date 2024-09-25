@@ -1,4 +1,5 @@
 import 'package:e_commerce_application/categories.dart';
+import 'package:e_commerce_application/screens/screean_all_products_categories.dart';
 import 'package:flutter/material.dart';
 
 class CategorieItems extends StatelessWidget {
@@ -13,10 +14,18 @@ class CategorieItems extends StatelessWidget {
           itemBuilder: (context, index) => Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  CircleAvatar(
-                    radius: 35,
-                    backgroundImage: AssetImage(
-                      categories[index].imagePath,
+                  InkWell(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ScreeanAllProductsCategories(
+                              data: categories[index].title),
+                        )),
+                    child: CircleAvatar(
+                      radius: 35,
+                      backgroundImage: AssetImage(
+                        categories[index].imagePath,
+                      ),
                     ),
                   ),
                   SizedBox(

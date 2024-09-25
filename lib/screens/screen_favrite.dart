@@ -1,3 +1,4 @@
+import 'package:e_commerce_application/reusable_components/product_card.dart';
 import 'package:e_commerce_application/services/cart_favourite_services.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
