@@ -6,6 +6,8 @@ class CartServices with ChangeNotifier {
   List<Products> get cartItems => _cartItems;
   double _tottalPrice = 0.00;
   double get tottalPrice => _tottalPrice;
+  bool _isvisible = false;
+  bool get isVisible => _isvisible;
   addCart(Products product) {
     if (_cartItems.contains(product)) {
       Products currenitem = _cartItems.singleWhere(
@@ -38,12 +40,19 @@ class CartServices with ChangeNotifier {
         )
         .toList();
     _tottalPrice = cartprices.fold(0.00, (_, price) => _ + price);
+    if (_tottalPrice == 0.0) {
+      _isvisible = false;
+    } else {
+      _isvisible = true;
+    }
+    print(_isvisible);
     notifyListeners();
   }
 
   removeItem(Products product) {
     product.quantity = 1;
     _cartItems.remove(product);
+    calculateTottalprice();
     notifyListeners();
   }
 }

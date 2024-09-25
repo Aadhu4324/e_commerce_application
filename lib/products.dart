@@ -20,6 +20,56 @@ class Products {
 
 List<Products> products = [
   Products(
+      title: "MetroNaut",
+      description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      price: 499,
+      quantity: 1,
+      categories: "Shirts",
+      image: "images/ShirtOne.webp",
+      id: 1,
+      isFav: false),
+  Products(
+      title: "AmazonBrand",
+      description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      price: 599,
+      quantity: 1,
+      categories: "Shirts",
+      image: "images/ShirtTwo.jpg",
+      id: 2,
+      isFav: false),
+  Products(
+      title: "Puma",
+      description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      price: 999,
+      quantity: 1,
+      categories: "Shirts",
+      image: "images/categorie1.jpg",
+      id: 3,
+      isFav: false),
+  Products(
+      title: "Peter England",
+      description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      price: 799,
+      quantity: 1,
+      categories: "Shirts",
+      image: "images/categorie1.jpg",
+      id: 4,
+      isFav: false),
+  Products(
+      title: "Peter England",
+      description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      price: 699,
+      quantity: 1,
+      categories: "Shirts",
+      image: "images/categorie1.jpg",
+      id: 5,
+      isFav: false),
+  Products(
       title: "Nike Sport Shoe",
       description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -27,7 +77,7 @@ List<Products> products = [
       quantity: 1,
       categories: "Shoes",
       image: "images/categorie1.jpg",
-      id: 1,
+      id: 6,
       isFav: false),
   Products(
       title: "Leives ",
@@ -37,7 +87,7 @@ List<Products> products = [
       quantity: 1,
       categories: "Shirts",
       image: "images/categorie2.jpg",
-      id: 2,
+      id: 7,
       isFav: false),
   Products(
       title: "Mamearth",
@@ -47,7 +97,7 @@ List<Products> products = [
       quantity: 1,
       categories: "Beauty",
       image: "images/categorie3.jpg",
-      id: 3,
+      id: 8,
       isFav: false),
   Products(
       title: "jwellery",
@@ -57,14 +107,14 @@ List<Products> products = [
       quantity: 1,
       categories: "Jwellery",
       image: "images/categorie4.jpg",
-      id: 4,
+      id: 9,
       isFav: false),
   Products(
       title: "Lpatop",
       description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       price: 49999,
-      quantity: 1,
+      quantity: 10,
       categories: "Tech",
       image: "images/categorie5.jpg",
       id: 5,

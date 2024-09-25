@@ -85,6 +85,7 @@ class _ScreenViewState extends State<ScreenView> {
         onTap: () {
           _cartServices.addCart(widget.product);
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            duration: Duration(seconds: 1),
             content: Text("Added"),
             backgroundColor: Colors.green,
           ));

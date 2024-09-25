@@ -1,3 +1,4 @@
+import 'package:e_commerce_application/services/cart_favourite_services.dart';
 import 'package:e_commerce_application/services/cart_services.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -13,6 +14,11 @@ class _ScreenCartState extends State<ScreenCart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Cart Items"),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
+      ),
       body: Consumer<CartServices>(
         builder: (context, value, child) {
           if (value.cartItems.isEmpty) {
@@ -78,20 +84,24 @@ class _ScreenCartState extends State<ScreenCart> {
       ),
       floatingActionButton:
           Consumer<CartServices>(builder: (context, data, child) {
-        return Container(
-          margin: EdgeInsets.only(bottom: 20, left: 35),
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height * .2,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("Total -",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              Text(
-                "₹ : ${data.tottalPrice}",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              )
-            ],
+        return Visibility(
+          visible: data.isVisible,
+          child: Container(
+            margin: EdgeInsets.only(bottom: 20, left: 35),
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * .2,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Total -",
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                Text(
+                  "₹ : ${data.tottalPrice}",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
           ),
         );
       }),
